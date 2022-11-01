@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Menu v2</title>
+    <title>Responsive SubMenu</title>
     <script
       src="https://kit.fontawesome.com/1935d064dd.js"
       crossorigin="anonymous"
@@ -21,9 +21,23 @@
           <ul class="nav-list">
             <li><a href="#">Home</a></li>
             <li><a href="#two">Two</a></li>
-            <li><a href="#three">Three</a></li>
+            <li class="three">
+              <a href="#">Three</a>
+              <i class="fas fa-angle-right"></i>
+            </li>
             <li><a href="#four">Four</a></li>
             <li><a href="#five">Five</a></li>
+          </ul>
+          <!-- Submenu -->
+          <ul class="nav-list submenu-three">
+            <li class="back">
+              <i class="fas fa-arrow-left"></i>&nbsp;
+              <a href="#" class="back-to-menu">Back to Menu</a>
+            </li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#get-started">Get Started</a></li>
+            <li><a href="#privacy">Privacy</a></li>
           </ul>
         </nav>
       </div>
