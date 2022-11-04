@@ -1,4 +1,9 @@
 const links = document.querySelectorAll(".nav-list li a");
+const rootElement = document.documentElement;
+const newsletter = document.querySelector(".newsletter")
+window.onscroll = () => scrollProgress()
+
+
 
 for (link of links) {
   link.addEventListener("click", smoothScroll);
@@ -55,3 +60,27 @@ back.addEventListener("click", () => {
   menu.style.transform = "translateX(0%)";
   subMenuThree.style.transform = "translateX(-100%)";
 })
+
+const newsletterExit = document.querySelector("#close-newsletter")
+
+function scrollProgress() {
+  const currentScrollState = document.body.scrollTop || rootElement.scrollTop
+  const pageHeight = rootElement.scrollHeight - rootElement.clientHeight
+  const scrollPercent = (currentScrollState / pageHeight) * 100
+
+  if (scrollPercent > 80) {
+    newsletter.style.transform = "translateX(0%)"
+  } else {
+    newsletter.style.transform = "translateX(-100%)"
+  }
+
+  newsletterExit.addEventListener("click", () => {
+    newsletter.style.transform = "translateX(-100%)"
+  })
+}
+
+
+
+
+
+
