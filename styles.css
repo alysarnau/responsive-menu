@@ -104,9 +104,29 @@ h2 {
   margin: 3px;
 }
 
-/* RESPONSIVE MENU */
-/* RESPONSIVE MENU */
-/* RESPONSIVE MENU */
+.newsletter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: var(--white);
+  border: 2px dashed var(--color-primary);
+  padding: 2rem 3rem;
+  /* transform: translateX(-100%); */
+  transition: all .5s;
+}
+
+.fa-times {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.4rem;
+  color: red;
+  cursor: pointer;
+}
+
+.newsletter input {
+  margin-bottom: 5px;
+}
 
 @media screen and (min-width: 601px) {
     .hamburger,
