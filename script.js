@@ -3,6 +3,9 @@ const rootElement = document.documentElement;
 const newsletter = document.querySelector(".newsletter")
 window.onscroll = () => scrollProgress()
 
+AOS.init({
+  duration: 1000,
+});
 
 
 for (link of links) {
@@ -78,6 +81,8 @@ function scrollProgress() {
     newsletter.style.transform = "translateX(-100%)"
   })
 }
+
+
 
 
 
